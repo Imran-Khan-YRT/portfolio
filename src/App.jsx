@@ -16,24 +16,22 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
-        {" "}
         {/*To-do*/}
         <div>
-          {" "}
           {/*To-do*/}
           <Navbar />
-          <Hero />
+          {/* <Hero /> */}
         </div>
         {/* <About />
         <Experience />
         <Tech />
         <Works /> */}
-        <Feedbacks />
-        <div>
+        {/* <Feedbacks /> */}
+        {/* <div> */}
           {/*To-do*/}
-          <Contact />
-          <StarsCanvas />
-        </div>
+          {/* <Contact />
+          <StarsCanvas /> */}
+        {/* </div> */}
       </div>
     </BrowserRouter>
   );
