@@ -44,11 +44,11 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-5"
+            className="w-7"
             onClick={() => setToggle(!toggle)}
           />
-          <div className={`${!toggle ? "hidden" : "flex"} `}>
-            <ul className="top-50 flex-col">
+          <div className={`${!toggle ? "hidden" : "flex"} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl `} >
+            <ul className={`flex flex-col gap-4`}>
               {navLinks.map((link) => (
                 <li
                   key={link.id}
