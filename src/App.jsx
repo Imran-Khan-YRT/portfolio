@@ -17,10 +17,10 @@ const App = () => {
     <BrowserRouter>
       <div>
         {/*To-do*/}
-        <div>
+        <div className="bg-cover bg-hero-pattern  bg-no-repeat  bg-center">
           {/*To-do*/}
           <Navbar />
-          {/* <Hero /> */}
+          <Hero />
         </div>
         {/* <About />
         <Experience />
