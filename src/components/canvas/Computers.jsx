@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from "react";
+import React,{ Suspense, useEffect, useState } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
@@ -10,7 +10,7 @@ const Computers = () => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black" />
+      <hemisphereLight intensity={0.15} groundcolor="black" />
       <pointLight intensity={1} />
       <primitive object={computer.scene} />
     </mesh>
@@ -20,12 +20,12 @@ const Computers = () => {
 const ComputerCanvas = () => {
   return (
     <Canvas
-      frameLoop="demand"
+      frameloop="demand"
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={<CanvasLoader />}>
+      <Suspense >
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
