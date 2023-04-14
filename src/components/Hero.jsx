@@ -21,6 +21,13 @@ const Hero = () => {
         </div>
       </div>
       <ComputersCanvas/>
+      <div className="xs:bottom-10">
+        <a href="#about">
+          <div>
+    
+          </div>
+        </a>
+      </div>
     </section>
   );
 };
