@@ -23,16 +23,13 @@ const App = () => {
           <Hero />
         </div>
         <About />
-        
         <Experience />
-        
         <Tech />
-        {/* 
-        <Works /> */}
+        <Works />
         {/* <Feedbacks /> */}
         {/* <div> */}
-          {/*To-do*/}
-          {/* <Contact />
+        {/*To-do*/}
+        {/* <Contact />
           <StarsCanvas /> */}
         {/* </div> */}
       </div>
