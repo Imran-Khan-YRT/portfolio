@@ -30,7 +30,7 @@ const Hero = () => {
         {/*problem*/}
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-2xl border-4 border-secondary flex justify-center items-start p-2 ">
-            <motion.dev
+            <motion.div
               animate={{
                 y: [0, 24, 0],
               }}

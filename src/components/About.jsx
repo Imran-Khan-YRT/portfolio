@@ -1,9 +1,9 @@
 import React from "react";
-import { Tilt } from "react-tilt";
+// import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { Services } from "../constants";
+import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({index, title, icon}) => {
@@ -28,7 +28,7 @@ const About = () => {
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
-        {Services.map((service, index) => {
+        {services.map((service, index) => {
           <ServiceCard key={service.title} index={index} {...service} />;
         })}
       </div>
