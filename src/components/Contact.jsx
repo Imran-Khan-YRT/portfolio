@@ -34,9 +34,9 @@ const Contact = () => {
         "template_xqu5tqa",
         "service_kl12x05",
         {
-          form_name: form.name,
+          from_name: form.name,
           to_name: "Adrian",
-          form_email: form.email,
+          from_email: form.email,
           to_email: "imran.khan.yrt@gmail.com",
           message: form.message,
         },
