@@ -8,6 +8,10 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { motion } from "framer-motion";
 
+const templateNewID = "template_boto48b";
+const serviceNewID = "service_fp70qeh";
+const publicNewKey = "73z_sPNnC3oVi3-40";
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -26,13 +30,10 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // template:   template_boto48b
-    // service:    service_fp70qeh
-    // public key:   73z_sPNnC3oVi3-40
     emailjs
       .send(
-        "template_xqu5tqa",
         "service_kl12x05",
+        "template_y2smsnj",
         {
           from_name: form.name,
           to_name: "Adrian",
@@ -45,11 +46,13 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          alert(
+            `Thank you ${form.name}. I will get back to you as soon as possible.`
+          );
 
           setForm({
             name: "",
-            emai: "",
+            email: "",
             message: "",
           });
         },
