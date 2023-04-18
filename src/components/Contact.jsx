@@ -8,10 +8,6 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { motion } from "framer-motion";
 
-const templateNewID = "template_boto48b";
-const serviceNewID = "service_fp70qeh";
-const publicNewKey = "73z_sPNnC3oVi3-40";
-
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -21,6 +17,10 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
+  const serviceNewID = "service_kl12x05";
+  const templateNewID = "template_y2smsnj";
+  const publicNewKey = "UWwIOZQ29TzZ45gtq";
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -29,11 +29,11 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
+    console.log(serviceNewID);
     emailjs
       .send(
-        "service_kl12x05",
-        "template_y2smsnj",
+        serviceNewID,
+        templateNewID,
         {
           from_name: form.name,
           to_name: "Adrian",
@@ -41,7 +41,7 @@ const Contact = () => {
           to_email: "imran.khan.yrt@gmail.com",
           message: form.message,
         },
-        "UWwIOZQ29TzZ45gtq"
+        publicNewKey
       )
       .then(
         () => {
