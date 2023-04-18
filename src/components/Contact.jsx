@@ -31,8 +31,8 @@ const Contact = () => {
     // public key:   73z_sPNnC3oVi3-40
     emailjs
       .send(
-        "template_boto48b",
-        "service_qospj7c",
+        "template_xqu5tqa",
+        "service_kl12x05",
         {
           form_name: form.name,
           to_name: "Adrian",
