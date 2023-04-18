@@ -15,7 +15,7 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
+      <div className="bg-tertiary">
         {/*To-do*/}
         <div className="bg-cover bg-hero-pattern  bg-no-repeat  bg-center">
           {/*To-do*/}
@@ -26,12 +26,11 @@ const App = () => {
         <Experience />
         <Tech />
         <Works />
-        {/* <Feedbacks /> */}
-        {/* <div> */}
-        {/*To-do*/}
-        {/* <Contact />
-          <StarsCanvas /> */}
-        {/* </div> */}
+        <Feedbacks />
+        <div>
+          <Contact />
+          {/* <StarsCanvas /> */}
+        </div>
       </div>
     </BrowserRouter>
   );
