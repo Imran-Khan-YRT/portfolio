@@ -15,7 +15,7 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
+      <div className=" bg-primary">
         <div className="bg-cover bg-hero-pattern  bg-no-repeat  bg-center">
           {/*To-do*/}
           <Navbar />
