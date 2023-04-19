@@ -21,9 +21,9 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className="w-9" />{" "}
           {/* "w-9 h-9 object-contain" */}
-          <p className="flex text-[18px]">
-            Adrian &nbsp;
-            <span className="sm:block hidden">| JS Mastery</span>
+          <p className="flex text-[18px] items-center justify-center">
+            Imran &nbsp;
+            <span className="sm:block hidden h-full">|&nbsp;FrontEnd Developer</span>
           </p>
         </Link>
         <ul className="sm:flex hidden gap-10 ">
