@@ -8,6 +8,12 @@ const Stars = (props) => {
   const ref = useRef();
   const [sphere] = random.inSphere(new Float32Array(5001), { radius: 1.2 });
   // console.log(sphere);
+
+  useFrame((state, delta) => {
+    ref.current.rotation.x -= delta / 10;
+    ref.current.rotation.y -= delta / 15;
+  });
+  
   return (
     
     <group rotation={[0, 0, Math.PI / 4]}>
@@ -15,7 +21,7 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color="#f272c8"
-          size={0.02}
+          size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
         />
@@ -31,6 +37,7 @@ const StarsCanvas = () => {
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
+        <Preload all />
       </Canvas>
     </div>
   );
