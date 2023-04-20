@@ -19,11 +19,12 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9" />{" "}
-          {/* "w-9 h-9 object-contain" */}
+          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="flex text-[18px] items-center justify-center">
             Imran &nbsp;
-            <span className="sm:block hidden h-full">|&nbsp;FrontEnd Developer</span>
+            <span className="sm:block hidden h-full">
+              |&nbsp;FrontEnd Developer
+            </span>
           </p>
         </Link>
         <ul className="sm:flex hidden gap-10 ">
@@ -47,7 +48,11 @@ const Navbar = () => {
             className="w-7"
             onClick={() => setToggle(!toggle)}
           />
-          <div className={`${!toggle ? "hidden" : "flex"} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl `} >
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl `}
+          >
             <ul className={`flex flex-col gap-4`}>
               {navLinks.map((link) => (
                 <li

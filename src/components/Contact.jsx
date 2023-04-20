@@ -44,7 +44,8 @@ const Contact = () => {
         publicNewKey
       )
       .then(
-        () => {
+        (response) => {
+          console.log(response);
           setLoading(false);
           alert(
             `Thank you ${form.name}. I will get back to you as soon as possible.`
