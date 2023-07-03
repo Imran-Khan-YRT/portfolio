@@ -15,7 +15,7 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className=" bg-primary">
+      <div className="bg-primary">
         <div className="bg-cover bg-hero-pattern bg-center">
           {/*bg-no-repeat */}
           <Navbar />
