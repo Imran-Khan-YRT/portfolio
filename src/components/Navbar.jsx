@@ -19,7 +19,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img src="./ik_logo.png" alt="logo" className="w-9 h-9 object-contain" />
           <p className="flex text-[18px] items-center justify-center">
             Imran &nbsp;
             <span className="sm:block hidden h-full">
