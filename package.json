@@ -1,13 +1,13 @@
 {
-  "home":"http://Imran-Khan-YRT.github.io/portfolio",
-  "name": "portfolio",
+  "home": "http://Imran-Khan-YRT.github.io/3D_PORTFOLIO",
+  "name": "3d_portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -34,6 +34,6 @@
     "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.1",
-    "vite": "^4.2.0"
+    "vite": "^4.3.9"
   }
 }
