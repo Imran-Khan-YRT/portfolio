@@ -21,10 +21,10 @@ const Navbar = () => {
         <img
           src="./ik_logo.png"
           alt="logo"
-          className="sm:w-9 w-6 sm:h-9 h-6 object-contain"
+          className="sm:w-7 w-6 sm:h-7 h-6 object-contain"
         />
-        <p className="flex text-[18px] items-center justify-center">
-          Imran &nbsp;
+        <p className="flex text-[17px] items-center justify-center text-secondary hover:text-white">
+          Imran Khan&nbsp;
           <span className="sm:block hidden h-full">
             |&nbsp;&nbsp;Software Engineer
           </span>
