@@ -18,8 +18,9 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915eff]">Imran</span>
           </h1>
           <p className={`${styles.heroSubText}`}>
-            I develop 3-d visuals, user <br className="sm:block hidden" />{" "}
-            interfaces and web applications
+            I like to create solid and scalable
+            <br className="sm:block hidden" />
+            &nbsp;products with great user experiences
           </p>
         </div>
       </div>
@@ -35,9 +36,9 @@ const Hero = () => {
                 y: [0, 24, 0],
               }}
               transition={{
-                duration:1.5,
-                repeat:Infinity,
-                repeatType:'loop'
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />
