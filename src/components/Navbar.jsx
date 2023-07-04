@@ -52,42 +52,50 @@ const Navbar = () => {
     );
   };
 
+  const MobileMenu = () => {
+    return (
+      <div className="sm:hidden">
+        <img
+          src={toggle ? close : menu}
+          alt="menu"
+          className="w-7"
+          onClick={() => setToggle((prevState) => !prevState)}
+        />
+        <div
+          className={`${
+            !toggle ? "hidden" : "flex"
+          } p-6 bg-[#050815] shadow-inner shadow-white   absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-3000 rounded-xl `}
+        >
+          <ul className={`flex flex-col gap-4`}>
+            {navLinks.map((link) => (
+              <li
+                key={link.id}
+                className={`${
+                  active === link.title ? "text-white" : "text-secondary"
+                } hover:text-white`}
+                onClick={() => {
+                  setToggle((prevState) => !prevState);
+                  setActive(link.title);
+                }}
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <nav className={`${styles.paddingX} w-full   py-5 fixed bg-[#050815] z-20 `}>
+    <nav
+      className={`${styles.paddingX} w-full   py-5 fixed bg-[#050815] z-20 `}
+    >
       {/*"w-full flex items-center py-5 fixed top-0 z-20"*/}
       <div className="flex justify-between items-center py-2">
         <LeftNavbar />
         <RightNavbar />
-        <div className="sm:hidden">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-7"
-            onClick={() => setToggle((prevState) => !prevState)}
-          />
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-100 rounded-xl `}
-          >
-            <ul className={`flex flex-col gap-4`}>
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-white" : "text-secondary"
-                  } hover:text-white`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <MobileMenu />
       </div>
     </nav>
   );
