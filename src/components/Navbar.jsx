@@ -4,47 +4,54 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close } from "../assets";
 
-const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
+const LeftNavbar = () => {
   return (
-    <nav className={`${styles.paddingX}`}>
+    <Link
+      to="/"
+      className="flex items-center gap-2"
+      onClick={() => {
+        setActive("");
+        window.scrollTo(0, 0);
+      }}
+    >
+      <img src="./ik_logo.png" alt="logo" className="w-9 h-9 object-contain" />
+      <p className="flex text-[18px] items-center justify-center">
+        Imran &nbsp;
+        <span className="sm:block hidden h-full">
+          |&nbsp;&nbsp;Software Engineer
+        </span>
+      </p>
+    </Link>
+  );
+};
+
+const RightNavbar = () => {
+  const [active, setActive] = useState("");
+  return (
+    <ul className="sm:flex hidden gap-10 ">
+      {navLinks.map((link) => (
+        <li
+          key={link.id}
+          className={`${active === link.title ? "text-white" : "text-secondary"}
+            } hover:text-white`}
+          onClick={() => setActive(link.title)}
+        >
+          <a href={`#${link.id}`}>{link.title}</a>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState("");
+  return (
+    <nav className={`${styles.paddingX} sticky top-0 z-2000`}>
       {/*"w-full flex items-center py-5 fixed top-0 z-20"*/}
       <div className="flex justify-between items-center py-2">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img
-            src="./ik_logo.png"
-            alt="logo"
-            className="w-9 h-9 object-contain"
-          />
-          <p className="flex text-[18px] items-center justify-center">
-            Imran &nbsp;
-            <span className="sm:block hidden h-full">
-              |&nbsp;&nbsp;Software Engineer
-            </span>
-          </p>
-        </Link>
-        <ul className="sm:flex hidden gap-10 ">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${
-                active === link.title ? "text-white" : "text-secondary"
-              }
-            } hover:text-white`}
-              onClick={() => setActive(link.title)}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
+        <LeftNavbar />
+        <RightNavbar />
         <div className="sm:hidden">
           <img
             src={toggle ? close : menu}
