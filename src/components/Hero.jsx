@@ -4,28 +4,8 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
-  return (
-    <section className="w-full h-screen">
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 mt-5`}
-      >
-        <div className="flex flex-col items-center">
-          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
-        </div>
-        <div>
-          <h1 className={`${styles.heroHeadText} `}>
-            Hi, I'm <span className="text-[#915eff]">Imran</span>
-          </h1>
-          <p className={`${styles.heroSubText}`}>
-            I like to create solid and scalable
-            <br className="sm:block hidden" />
-            &nbsp;products with great user experiences
-          </p>
-        </div>
-      </div>
-      <ComputersCanvas />
-
+  const PerpetualIcon = () => {
+    return (
       <div className="absolute xs:bottom-10 bottom-32 w-full  flex justify-center items-center ">
         {" "}
         {/*problem*/}
@@ -45,6 +25,49 @@ const Hero = () => {
           </div>
         </a>
       </div>
+    );
+  };
+
+  const DescriptionBarIcon = () => {
+    return (
+      <div className="flex flex-col items-center">
+        <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
+        <div className="w-1 sm:h-80 h-40 violet-gradient" />
+      </div>
+    );
+  };
+
+  const DescriptionText = () => {
+    return (
+      <div>
+        <h1 className={`${styles.heroHeadText} `}>
+          Hi, I'm <span className="text-[#915eff]">Imran</span>
+        </h1>
+        <p className={`${styles.heroSubText}`}>
+          I like to create solid and scalable
+          <br className="sm:block hidden" />
+          &nbsp;products with great user experiences
+        </p>
+      </div>
+    );
+  };
+
+  const Description = () => {
+    return (
+      <div
+        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 mt-5`}
+      >
+        <DescriptionBarIcon />
+        <DescriptionText />
+      </div>
+    );
+  };
+
+  return (
+    <section className="w-full h-screen">
+      <Description />
+      <ComputersCanvas />
+      <PerpetualIcon />
     </section>
   );
 };
