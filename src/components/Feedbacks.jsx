@@ -16,7 +16,7 @@ const FeedbackCard = ({
   return (
     <motion.div
       variants={fadeIn("", "spring", index * 0.5, 0.75)}
-      className="bg-black-200 p-10 rounded-2xl xs;w-[320px] w-full"
+      className="bg-black-200 p-10  xs:w-[320px] w-full  shadow-sm shadow-[#A9A6C3] rounded-xl"
     >
       <p className="text-white font-black text-[48px]">"</p>
       <div className="mt-1 flex flex-col justify-around">
@@ -31,7 +31,11 @@ const FeedbackCard = ({
               {designation} of {company}
             </p>
           </div>
-          <img src={image} alt={`feedback-by-${name}`}  className="w-10 h-10 rounded-full object-cover"/>
+          <img
+            src={image}
+            alt={`feedback-by-${name}`}
+            className="w-10 h-10 rounded-full object-cover"
+          />
         </div>
       </div>
     </motion.div>
@@ -39,27 +43,22 @@ const FeedbackCard = ({
 };
 const Feedbacks = () => {
   return (
-    <div className="mt-12 bg-tertiary rounded-[20px] p-[50px]">
+    <div className="mt-12 bg-tertiary rounded-xl p-[50px] shadow-sm shadow-[#A9A6C3]">
       <div
         className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
       >
         <motion.div>
           <p className={styles.sectionSubText}>What others say</p>
           <h2 className={styles.sectionHeadText}>Testimonials.</h2>
-          
         </motion.div>
       </div>
       <div className={`{styles.paddingX} flex gap-7 -mt-20`}>
-            {testimonials.map((testimonial, index) => (
-              <FeedbackCard
-                key={testimonial.name}
-                index={index}
-                {...testimonial}
-              />
-            ))}
-          </div>
+        {testimonials.map((testimonial, index) => (
+          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+        ))}
+      </div>
     </div>
   );
 };
 
-export default SectionWrapper(Feedbacks,"Feedbacks");
+export default SectionWrapper(Feedbacks, "Feedbacks");
