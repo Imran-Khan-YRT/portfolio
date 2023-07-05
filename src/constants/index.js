@@ -24,6 +24,7 @@ import {
   shopify,
   carrent,
   socioPedial,
+  amazonUI,
   jobit,
   tripguide,
   threejs,
@@ -198,6 +199,27 @@ const projects = [
     ],
     image: socioPedial,
     source_code_link: "https://github.com/Imran-Khan-YRT/SOCIAL_APP",
+  },
+  {
+    name: "Amazon UI Clone",
+    description:
+      "Buy, Sell, watch movies for free. You don't have to pay cause there is no payment option",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: amazonUI,
+    source_code_link: "https://challenge-36772.web.app/",
   },
 ];
 

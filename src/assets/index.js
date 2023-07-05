@@ -37,7 +37,8 @@ import moinul from "./colleague/moinul.jpeg";
 import rezaul from "./colleague/rezaul.jpeg";
 import noor from "./colleague/noor.jpeg";
 
-import socioPedial from "./projects/socioPedial.png"
+import socioPedial from "./projects/socioPedial.png";
+import amazonUI from "./projects/amazonUI.png"
 
 
 export {
@@ -75,5 +76,6 @@ export {
   moinul,
   rezaul,
   noor,
-  socioPedial
+  socioPedial,
+  amazonUI
 };
