@@ -33,6 +33,11 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import moinul from "./colleague/moinul.jpeg";
+import rezaul from "./colleague/rezaul.jpeg";
+import noor from "./colleague/noor.jpeg";
+
+
 export {
   logo,
   backend,
@@ -65,4 +70,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  moinul,
+  rezaul,
+  noor
 };

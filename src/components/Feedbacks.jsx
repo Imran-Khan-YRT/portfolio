@@ -19,7 +19,7 @@ const FeedbackCard = ({
       className="bg-black-200 p-10 rounded-2xl xs;w-[320px] w-full"
     >
       <p className="text-white font-black text-[48px]">"</p>
-      <div className="mt-1">
+      <div className="mt-1 flex flex-col justify-around">
         <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
         <div className="mt-7 flex justify-between items-center gap-1">
           <div className="flex-1 flex flex-col">

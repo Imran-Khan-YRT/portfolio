@@ -26,6 +26,9 @@ import {
   jobit,
   tripguide,
   threejs,
+  moinul,
+  rezaul,
+  noor
 } from "../assets";
 
 export const navLinks = [
@@ -145,27 +148,27 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Always a cozy enviroment with Imran around. Not to mention his incredible work ethics & attention to details!",
+    name: "Rezaul Islam",
+    designation: "Mobile App Developer",
+    company: "Marginedge",
+    image: rezaul
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "Need any help with automation, Better Call Imran! Voila solved!",
+    name: "Moinul Hasan",
+    designation: "Ex-Developer",
+    company: "Marginedge",
+    image: moinul
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "His ability to process everything and then find a solution to any problem - Glad we met!",
+    name: "Nazmur Rashid Noor",
+    designation: "Developer",
+    company: "Google",
+    image: noor
   },
 ];
 

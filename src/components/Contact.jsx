@@ -26,6 +26,8 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
+  const ConfirmationModal = () => {};
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -36,7 +38,7 @@ const Contact = () => {
         templateNewID,
         {
           from_name: form.name,
-          to_name: "Adrian",
+          to_name: "Imran",
           from_email: form.email,
           to_email: "imran.khan.yrt@gmail.com",
           message: form.message,
