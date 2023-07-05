@@ -37,6 +37,8 @@ import moinul from "./colleague/moinul.jpeg";
 import rezaul from "./colleague/rezaul.jpeg";
 import noor from "./colleague/noor.jpeg";
 
+import socioPedial from "./projects/socioPedial.png"
+
 
 export {
   logo,
@@ -72,5 +74,6 @@ export {
   tripguide,
   moinul,
   rezaul,
-  noor
+  noor,
+  socioPedial
 };

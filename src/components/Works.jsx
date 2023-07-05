@@ -19,7 +19,7 @@ const Projectcard = ({
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{
-          max: 45,
+          max: -45,
           scale: 1,
           speed: 450,
         }}
@@ -45,7 +45,9 @@ const Projectcard = ({
           </div>
           <div className="mt-4 flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <p key={tag.name} className={`text-[13px] ${tag.color}`}>#{tag.name}</p>
+              <p key={tag.name} className={`text-[13px] ${tag.color}`}>
+                #{tag.name}
+              </p>
             ))}
           </div>
         </div>
@@ -68,9 +70,12 @@ const Works = () => {
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          links to code repositories in it. It reflects my ability to solve
+          complex problems, work with different technologies, and manage
+          projects effectively.
+          <br />
+          <br />
+          Stay tuned. More on the way...
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
