@@ -7,6 +7,7 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+import cypress from "./tech/cypress.svg";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -41,6 +42,7 @@ export {
   github,
   menu,
   close,
+  cypress,
   css,
   docker,
   figma,
