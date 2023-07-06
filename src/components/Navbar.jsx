@@ -11,7 +11,7 @@ const Navbar = () => {
   const LeftNavbar = () => {
     return (
       <Link
-        to="/"
+        to="/3D_PORTFOLIO/"
         className="flex items-center gap-2"
         onClick={() => {
           setActive("");
