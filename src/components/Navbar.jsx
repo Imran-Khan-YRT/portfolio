@@ -92,7 +92,7 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full   py-5 fixed bg-[#050815] z-20 `}
     >
       {/*"w-full flex items-center py-5 fixed top-0 z-20"*/}
-      <div className="flex justify-between items-center py-2">
+      <div className="flex justify-between items-center py-2 w-full">
         <LeftNavbar />
         <RightNavbar />
         <MobileMenu />

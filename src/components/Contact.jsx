@@ -16,6 +16,7 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
   const serviceNewID = "service_kl12x05";
   const templateNewID = "template_y2smsnj";
@@ -30,41 +31,43 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    console.log(serviceNewID);
-    emailjs
-      .send(
-        serviceNewID,
-        templateNewID,
-        {
-          from_name: form.name,
-          to_name: "Imran",
-          from_email: form.email,
-          to_email: "imran.khan.yrt@gmail.com",
-          message: form.message,
-        },
-        publicNewKey
-      )
-      .then(
-        (response) => {
-          console.log(response);
-          setLoading(false);
-          alert(
-            `Thank you ${form.name}. I will get back to you as soon as possible.`
-          );
+    if (form.name == "" || form.email == "" || form.message == "") {
+      setMessage("* Fill out the required field");
+    } else {
+      setLoading(true);
+      console.log(serviceNewID);
+      emailjs
+        .send(
+          serviceNewID,
+          templateNewID,
+          {
+            from_name: form.name,
+            to_name: "Imran",
+            from_email: form.email,
+            to_email: "imran.khan.yrt@gmail.com",
+            message: form.message,
+          },
+          publicNewKey
+        )
+        .then(
+          (response) => {
+            console.log(response);
+            setLoading(false);
+            setMessage(`Thank you, ${form.name}. I will get back to you soon.`);
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.log(error);
-          alert("Something went wrong.");
-        }
-      );
+            setForm({
+              name: "",
+              email: "",
+              message: "",
+            });
+          },
+          (error) => {
+            setLoading(false);
+            console.log(error);
+            setMessage("Oops! Please try again.")
+          }
+        );
+    }
   };
 
   return (
@@ -118,13 +121,17 @@ const Contact = () => {
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
-
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 w-fit text-white font-bold shadow-[#A9A6C3] shadow-sm rounded-xl"
-          >
-            {loading ? "Sending" : "Send"}
-          </button>
+          <div className="flex justify-between m-1 justify-items-center items-center">
+            <button
+              type="submit"
+              className="bg-tertiary py-2 px-8 w-fit text-white font-semibold shadow-[#A9A6C3] shadow-sm rounded-xl"
+            >
+              {loading ? "Sending" : "Send"}
+            </button>
+            <p className="text-[#A9A6C3] font-thin text-xs pl-2">
+              {message}
+            </p>
+          </div>
         </form>
       </motion.div>
 
