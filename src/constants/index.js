@@ -23,6 +23,7 @@ import {
   tesla,
   shopify,
   carrent,
+  ecoFarming,
   socioPedial,
   amazonUI,
   jobit,
@@ -179,6 +180,26 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "mimodz",
+    description: "Eco farming with new technology. A revolution in agri-tech section in Gambia. Watch out!!!",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MUI library",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      }
+    ],
+    image: ecoFarming,
+    source_code_link: "https://mimodz.com/",
+  },
   {
     name: "Sociopedial",
     description:

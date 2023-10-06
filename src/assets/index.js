@@ -37,6 +37,7 @@ import moinul from "./colleague/moinul.jpeg";
 import rezaul from "./colleague/rezaul.jpeg";
 import noor from "./colleague/noor.jpeg";
 
+import ecoFarming from "./projects/ecoFarming.png";
 import socioPedial from "./projects/socioPedial.png";
 import amazonUI from "./projects/amazonUI.png"
 
@@ -76,6 +77,7 @@ export {
   moinul,
   rezaul,
   noor,
+  ecoFarming,
   socioPedial,
   amazonUI
 };
